@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask Question</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+        }
+        .button {
+            margin: 10px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .yes {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .no {
+            background-color: #f44336;
+            color: white;
+        }
+        .dancing {
+            display: none;
+            font-size: 2em;
+        }
+        .dancing.active {
+            display: block;
+            animation: dance 1s infinite;
+        }
+        @keyframes dance {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>Hi baby, can I be your girlfriend please?</p>
+        <button class="button yes" onclick="showFlowers()">Yes</button>
+        <button class="button no" onclick="showSad()">No</button>
+        <div id="flowers" class="dancing">
+            
+        </div>
+        <div id="sad" class="dancing">
+            
+        </div>
+    </div>
+    <script>
+        function showFlowers() {
+            document.getElementById('flowers').classList.add('active');
+        }
+        function showSad() {
+            document.getElementById('sad').classList.add('active');
+        }
+    </script>
+</body>
+</html>
+
+Message #general
